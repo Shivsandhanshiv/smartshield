@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShield | AI-Powered YouTube Moderation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { 
+            --primary: #1e3c72; 
+            --secondary: #2a5298; 
+            --accent: #ff0000; 
+            --text: #333; 
+            --bg-light: #f4f7f6;
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            color: var(--text); 
+            line-height: 1.6; 
+            background-color: var(--bg-light);
+        }
+        
+        .hero { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 35px; opacity: 0.9; }
+        
+        /* Button Styling */
+        .btn { padding: 18px 40px; font-size: 18px; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
+        .btn-download { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+        .btn-download:hover { background: #cc0000; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4); }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .mission-header { text-align: center; margin-bottom: 50px; }
+        .mission-header h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 15px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: #fff; padding: 30px; border-radius: 15px; border-top: 5px solid var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        .preview-box { background: #fff; border-radius: 12px; padding: 30px; margin-top: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .comment { padding: 15px; border-bottom: 1px solid #eee; margin-bottom: 10px; border-radius: 6px; position: relative; }
+        .safe { background-color: #f0fff4; border-left: 5px solid #38a169; }
+        .spam { background-color: #fffaf0; border-left: 5px solid #ff9800; }
+        .toxic { background-color: #fff5f5; border-left: 5px solid #f44336; }
+        
+        .label { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; float: right; color: white; }
+        .label-safe { background: #38a169; }
+        .label-spam { background: #ff9800; }
+        .label-toxic { background: #f44336; }
+
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>SmartShield</h1>
+        <p>A Hybrid Deep Learning-Based Chrome Extension for Real-Time Detection of Spam and Toxic Comments on YouTube.</p>
+        
+        <a href="SmartShield_System_v1.zip" download="SmartShield_System_v1.zip" class="btn btn-download">
+         Download Extension v1.0
+        </a>
+    </header>
+
+    <div class="container">
+        <section class="mission-header">
+            <h2>Our Mission</h2>
+            <p>Our goal is to create a safer online environment by shielding creators and viewers from harmful behavior using advanced context-aware AI.</p>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Hybrid AI Engine</h3>
+                <p>Combines <strong>RoBERTa</strong> and <strong>CNN-LSTM</strong> for high-accuracy protection.</p>
+            </div>
+            <div class="card">
+                <h3>Explainable AI (XAI)</h3>
+                <p>Uses <strong>LIME and SHAP</strong> so users understand why a comment was flagged.</p>
+            </div>
+            <div class="card">
+                <h3>Multilingual Support</h3>
+                <p>Detects toxicity across multiple languages and alternate spellings.</p>
+            </div>
+        </div>
+
+        <section class="preview-box">
+            <h3>Live Detection Preview</h3>
+            <div class="comment safe">
+                <span class="label label-safe">Safe</span>
+                <strong>User123:</strong> This project implementation is top-notch! Great work.
+            </div>
+            <div class="comment spam">
+                <span class="label label-spam">Spam Detected</span>
+                <strong>Bot_404:</strong> CLICK HERE FOR FREE GIFT CARDS!!! 🎁
+            </div>
+            <div class="comment toxic">
+                <span class="label label-toxic">Toxic Content</span>
+                <strong>Hater88:</strong> This is a complete waste of time.
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 SmartShield AI. All rights reserved.
+    </footer>
+
+    <script>
+        function downloadExtension() {
+            window.location.href = 'SmartShield_System_v1.zip';
+        }
+    </script>
+
+</body>
+</html>

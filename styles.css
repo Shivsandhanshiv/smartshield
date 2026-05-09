@@ -1,0 +1,66 @@
+/* Color Variables */
+:root { 
+    --primary: #1e3c72; 
+    --secondary: #2a5298; 
+    --accent: #ff0000; 
+    --text: #333; 
+    --bg-light: #f4f7f6;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: var(--text); 
+    line-height: 1.6; 
+    background-color: var(--bg-light);
+}
+
+/* Header/Hero */
+.hero { 
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); 
+    color: white; 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.btn-download { 
+    padding: 15px 40px; font-size: 18px; border: none; border-radius: 50px; 
+    cursor: pointer; font-weight: bold; background: var(--accent); color: white; 
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); 
+}
+
+/* Layout */
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+.mission-header { text-align: center; margin-bottom: 40px; }
+
+/* The Preview Box Highlighting Logic */
+.preview-box { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.comment { padding: 15px; margin-bottom: 15px; border-radius: 8px; position: relative; border: 1px solid #ddd; }
+
+/* 1. Safe - Green highlighting */
+.safe { 
+    background-color: #f0fff4 !important; 
+    border-left: 10px solid #38a169 !important; 
+}
+.label-safe { background: #38a169; color: white; }
+
+/* 2. Spam - Orange highlighting */
+.spam { 
+    background-color: #fffaf0 !important; 
+    border-left: 10px solid #ed8936 !important; 
+}
+.label-spam { background: #ed8936; color: white; }
+
+/* 3. Toxic - Red highlighting */
+.toxic { 
+    background-color: #fff5f5 !important; 
+    border-left: 10px solid #e53e3e !important; 
+}
+.label-toxic { background: #e53e3e; color: white; }
+
+.label { 
+    font-size: 0.75rem; font-weight: bold; text-transform: uppercase; 
+    padding: 4px 10px; border-radius: 4px; float: right; 
+}
+
+footer { text-align: center; padding: 30px; color: #777; font-size: 0.8rem; }
